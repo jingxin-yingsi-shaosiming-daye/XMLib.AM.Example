@@ -14,6 +14,10 @@ using XMLib.Extensions;
 namespace XMLib.AM
 {
     [Flags]
+    
+    /// <summary>
+    /// 视图类型
+    /// </summary>
     public enum ViewType
     {
         None = 0b0000_0000,
@@ -65,19 +69,49 @@ namespace XMLib.AM
         /// 身体范围选择索引
         /// </summary>
         public int bodyRangeSelectIndex = -1;
+        /// <summary>
+        /// 动作选择索引
+        /// </summary>
         public int actionSelectIndex = -1;
+        /// <summary>
+        /// 全局动作选择索引
+        /// </summary>
         public int globalActionSelectIndex = -1;
+        /// <summary>
+        /// 帧选择索引
+        /// </summary>
         public int frameSelectIndex = -1;
+        /// <summary>
+        /// 允许所有控制
+        /// </summary>
         public bool enableAllControl = false;
+        /// <summary>
+        /// 允许快键键
+        /// </summary>
         public bool enableQuickKey = false;
 
+        /// <summary>
+        /// 视图类型
+        /// </summary>
         public ViewType showView;
 
+        /// <summary>
+        /// 帧率
+        /// </summary>
         public float frameRate => 0.033f;
 
+        /// <summary>
+        /// 其它视图滚动坐标
+        /// </summary>
         public Vector2 otherViewScrollPos = Vector2.zero;
 
+        /// <summary>
+        /// 帧宽度
+        /// </summary>
         public float frameWidth = 40;
+        /// <summary>
+        /// 帧视图高度
+        /// </summary>
         public float frameListViewRectHeight = 200f;
     }
 
@@ -121,16 +155,49 @@ namespace XMLib.AM
             win.UpdateConfig(config);
         }
 
+        /// <summary>
+        /// 动作列表视图
+        /// </summary>
         [NonSerialized] public readonly ActionListView actionListView;
+        /// <summary>
+        /// 动作设置视图
+        /// </summary>
         [NonSerialized] public readonly ActionSetView actionSetView;
+        /// <summary>
+        /// 全局动作列表视图
+        /// </summary>
         [NonSerialized] public readonly GlobalActionListView globalActionListView;
+        /// <summary>
+        /// 全局动作设置视图
+        /// </summary>
         [NonSerialized] public readonly GlobalActionSetView globalActionSetView;
+        /// <summary>
+        /// 攻击范围列表视图
+        /// </summary>
         [NonSerialized] public readonly AttackRangeListView attackRangeListView;
+        /// <summary>
+        /// 身体范围列表视图
+        /// </summary>
         [NonSerialized] public readonly BodyRangeListView bodyRangeListView;
+        /// <summary>
+        /// 帧列表视图
+        /// </summary>
         [NonSerialized] public readonly FrameListView frameListView;
+        /// <summary>
+        /// 状态列表视图
+        /// </summary>
         [NonSerialized] public readonly StateListView stateListView;
+        /// <summary>
+        /// 状态设置视图
+        /// </summary>
         [NonSerialized] public readonly StateSetView stateSetView;
+        /// <summary>
+        /// 菜单视图
+        /// </summary>
         [NonSerialized] public readonly MenuView menuView;
+        /// <summary>
+        /// 工具视图
+        /// </summary>
         [NonSerialized] public readonly ToolView toolView;
 
         //[SerializeReference]
