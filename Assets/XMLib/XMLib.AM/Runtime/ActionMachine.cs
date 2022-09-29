@@ -33,7 +33,7 @@ using ControllerType = System.Object;
 namespace XMLib.AM
 {
     /// <summary>
-    /// ActionMachine
+    /// ActionMachine 动作机器
     /// </summary>
     public class ActionMachine : IActionMachine
     {
@@ -90,6 +90,9 @@ namespace XMLib.AM
             */
         }
 
+        /// <summary>
+        /// 重播动画
+        /// </summary>
         public void ReplayAnim()
         {
             eventTypes |= ActionMachineEvent.AnimChanged;

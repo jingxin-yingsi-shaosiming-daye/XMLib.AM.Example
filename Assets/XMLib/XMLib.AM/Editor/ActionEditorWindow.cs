@@ -17,13 +17,33 @@ namespace XMLib.AM
     public enum ViewType
     {
         None = 0b0000_0000,
-
+        /// <summary>
+        /// 全局动作
+        /// </summary>
         GlobalAction = 0b0000_0001,
+        /// <summary>
+        /// 状态
+        /// </summary>
         State = 0b0000_0010,
+        /// <summary>
+        /// 状态设置
+        /// </summary>
         StateSet = 0b0000_0100,
+        /// <summary>
+        /// 动作
+        /// </summary>
         Action = 0b0000_1000,
+        /// <summary>
+        /// 工具
+        /// </summary>
         Tool = 0b0001_0000,
+        /// <summary>
+        /// 其他
+        /// </summary>
         Other = 0b0010_0000,
+        /// <summary>
+        /// 帧
+        /// </summary>
         Frame = 0b0100_0000,
     }
 
@@ -33,8 +53,17 @@ namespace XMLib.AM
     [Serializable]
     public partial class ActionEditorSetting
     {
+        /// <summary>
+        /// 状态选择索引
+        /// </summary>
         public int stateSelectIndex = -1;
+        /// <summary>
+        /// 攻击角度选择索引
+        /// </summary>
         public int attackRangeSelectIndex = -1;
+        /// <summary>
+        /// 身体范围选择索引
+        /// </summary>
         public int bodyRangeSelectIndex = -1;
         public int actionSelectIndex = -1;
         public int globalActionSelectIndex = -1;
@@ -71,7 +100,7 @@ namespace XMLib.AM
                 return;
             }
 
-            var win = EditorWindow.GetWindow<ActionEditorWindow>();
+            ActionEditorWindow win = EditorWindow.GetWindow<ActionEditorWindow>();
             if (win.configAsset != null)
             {
                 if (win.configAsset == config)
