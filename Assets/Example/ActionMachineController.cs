@@ -29,7 +29,8 @@ public class ActionMachineController : MonoBehaviour
     [SerializeField]
     public bool _isGround = true;
 
-    private IActionMachine actionMachine;
+    //private IActionMachine actionMachine;
+    private ActionMachine actionMachine;
     private float animatorTimer;
 
     public Rigidbody rigid => _rigid;
