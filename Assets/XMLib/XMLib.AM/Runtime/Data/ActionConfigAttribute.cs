@@ -33,6 +33,9 @@ namespace XMLib.AM
     [AttributeUsage(AttributeTargets.Class, AllowMultiple = false, Inherited = false)]
     public class ActionConfigAttribute : Attribute
     {
+        /// <summary>
+        /// 处理器类型
+        /// </summary>
         public Type handlerType { get; protected set; }
 
         public ActionConfigAttribute(Type handlerType)
