@@ -29,6 +29,7 @@ namespace XMLib.AM
 {
     /// <summary>
     /// ActionConfigAttribute
+    /// 动作配置特性
     /// </summary>
     [AttributeUsage(AttributeTargets.Class, AllowMultiple = false, Inherited = false)]
     public class ActionConfigAttribute : Attribute
